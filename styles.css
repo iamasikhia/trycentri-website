@@ -881,6 +881,23 @@ em { font-style: italic; color: var(--accent); }
   .testimonial + .testimonial { border-top: 1px solid rgba(255,255,255,.15); }
 }
 
+.team-eyebrow { margin: 8px 0 14px; }
+
+/* ---------- Mobile polish ---------- */
+@media (max-width: 760px) {
+  .hero-head .eyebrow { font-size: 11px; letter-spacing: .1em; }
+  .hero-actions { flex-direction: column; }
+  .hero-actions .btn, .testimonial-cta .btn { width: 100%; text-align: center; }
+  .tool { justify-content: flex-start; gap: 10px; min-height: 0; }
+  .tool-name { font-size: 19px; }
+  .tool-cat { font-size: 10px; }
+  .testimonial-cta { margin-top: 8px; }
+  .testimonial-cta p { font-size: 26px; }
+  .interview-actions { gap: 20px; }
+  .section-head h2 { font-size: 34px; }
+  .member h3 { font-size: 40px; }
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer { padding: 28px 0; font-size: 13px; color: var(--muted); }
