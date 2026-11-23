@@ -1,0 +1,7 @@
+# Large source videos (the compressed web version lives in assets/videos/)
+*.mov
+Centri_conversation_*.mp4
+
+# System / tooling
+.DS_Store
+.vercel
