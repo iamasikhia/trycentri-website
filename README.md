@@ -22,7 +22,7 @@ Tips: keep photos under ~500 KB (export at ~1600px wide), videos as H.264 MP4 un
 
 ## Before going live
 
-- The contact form uses `mailto:paul@centriai.com`, which opens the visitor's email app. For submissions that arrive without an email app, switch to a form service (Formspree, Netlify Forms).
+- Booking buttons link to Calendly. Testimonials live in the `<!-- TESTIMONIALS -->` section of index.html.
 - Edit the tools list in the `#tools` section to match the tools you actually support.
 
 ## Adding a story

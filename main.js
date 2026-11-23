@@ -221,7 +221,7 @@ if (!reduceMotion && 'IntersectionObserver' in window) {
   const groups = [
     '.section-head', '.band', '.brain-steps li', '.brain-feed', '.service', '.model', '.tool', '.principles article',
     '.step', '.story-card', '.member', '.faq details', '.statement blockquote',
-    '.interview-head > *', '.interview-media > *', '.contact-grid > *',
+    '.interview-head > *', '.interview-media > *', '.testimonial', '.testimonial-cta',
     '.hero-copy', '.hero-side', '.gallery-caption', '.tools-note', '.sub-label',
     '.article-head > *', '.article-body > *', '.article-cover', '.article-wide', '.article-trio', '.article-pair',
     '.article-caption'

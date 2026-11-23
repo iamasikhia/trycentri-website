@@ -824,6 +824,63 @@ em { font-style: italic; color: var(--accent); }
 .contact-form textarea:focus { outline: none; border-bottom-color: var(--paper); }
 .contact-form .btn { justify-self: start; margin-top: 10px; }
 
+/* ---------- Testimonials ---------- */
+
+.testimonials { background: var(--ink); color: var(--paper); padding: 120px 0 110px; }
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,.25);
+}
+.testimonial { margin: 0; padding: 48px 40px 56px; display: flex; flex-direction: column; }
+.testimonial:first-child { padding-left: 0; }
+.testimonial:last-child { padding-right: 0; }
+.testimonial + .testimonial { border-left: 1px solid rgba(255,255,255,.15); }
+.quote-mark {
+  font-family: var(--serif);
+  font-size: 110px;
+  line-height: .6;
+  height: 44px;
+  color: #d9a796;
+}
+.testimonial blockquote {
+  margin: 0 0 36px;
+  font-family: var(--serif);
+  font-size: clamp(22px, 2vw, 27px);
+  line-height: 1.32;
+  flex: 1;
+}
+.testimonial figcaption { display: grid; gap: 4px; font-size: 14px; }
+.testimonial figcaption strong { font-weight: 600; font-size: 16px; }
+.testimonial figcaption span { color: rgba(255,255,255,.6); }
+.testimonial figcaption a { color: #d9a796; text-decoration: none; width: fit-content; border-bottom: 1px solid rgba(217,167,150,.4); }
+.testimonial figcaption a:hover { border-color: #d9a796; }
+.testimonial-cta {
+  margin-top: 72px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255,255,255,.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.testimonial-cta p { margin: 0; font-family: var(--serif); font-size: clamp(26px, 2.8vw, 36px); }
+.testimonial-cta em { color: #d9a796; }
+
+@media (max-width: 960px) and (min-width: 761px) {
+  .testimonial-grid { grid-template-columns: 1fr; }
+  .testimonial, .testimonial + .testimonial, .testimonial:first-child, .testimonial:last-child { padding: 40px 0; border-left: 0; }
+  .testimonial + .testimonial { border-top: 1px solid rgba(255,255,255,.15); }
+}
+@media (max-width: 760px) {
+  .testimonials { padding: 80px 0; }
+  .testimonial-grid { grid-template-columns: 1fr; }
+  .testimonial, .testimonial + .testimonial, .testimonial:first-child, .testimonial:last-child { padding: 40px 0; border-left: 0; }
+  .testimonial + .testimonial { border-top: 1px solid rgba(255,255,255,.15); }
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer { padding: 28px 0; font-size: 13px; color: var(--muted); }
