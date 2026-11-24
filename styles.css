@@ -224,6 +224,9 @@ em { font-style: italic; color: var(--accent); }
 .stat + .stat { padding-left: 20px; border-left: 1px solid var(--rule); }
 .stat-figure { display: block; white-space: nowrap; font-family: var(--serif); font-size: clamp(40px, 4.2vw, 56px); line-height: 1; color: var(--accent); margin-bottom: 8px; }
 .stat-label { display: block; font-size: 14px; line-height: 1.4; color: var(--ink-soft); }
+.hero-proof { display: flex; align-items: center; gap: 20px; margin-top: 28px; padding: 18px 0 0; border-top: 1px solid var(--ink); }
+.hero-proof .stat-figure { margin: 0; }
+.hero-proof .stat-label { max-width: 260px; color: var(--ink); }
 .stat-source { margin: 24px 0 0; padding-top: 14px; border-top: 1px solid var(--rule); font-size: 11px; line-height: 1.5; color: var(--muted); }
 
 /* Connected photo gallery */
