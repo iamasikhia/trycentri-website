@@ -1339,13 +1339,6 @@ html.lenis, html.lenis body { height: auto; }
 .hero-recognition:hover img { opacity: .8; }
 @media (max-width: 760px) { .hero-recognition { margin-top: 32px; gap: 14px; } .hero-recognition img { height: 38px; } }
 
-/* Hero rows line up: top rules level with the lede, bottom rules level across columns */
-@media (min-width: 961px) {
-  .hero-grid { align-items: stretch; }
-  .hero-copy, .hero-side { display: flex; flex-direction: column; }
-  .hero-copy .lede { margin-top: -6px; }
-  .hero-recognition, .hero-proof { margin-top: auto; box-sizing: border-box; height: 92px; padding-top: 18px; align-items: center; }
-  .hero-recognition { display: flex; align-self: stretch; border-top-color: var(--ink); }
-  .hero-actions { margin-bottom: 40px; }
-  .stat-source { margin-bottom: 40px; }
-}
+/* Hero: Harvard recognition sits under the 1,000+ stat */
+.hero-side .hero-recognition { display: flex; margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--rule); }
+@media (min-width: 961px) { .hero-copy .lede { margin-top: -6px; } }
