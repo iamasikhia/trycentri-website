@@ -1644,3 +1644,6 @@ body::after {
 @media (prefers-reduced-motion: reduce) { .btn-go, .road-stop.is-now .road-dot::after { animation: none; } }
 @media (max-width: 1100px) { .pr-grid { grid-template-columns: 1fr 1fr; row-gap: 48px; } }
 @media (max-width: 760px) { .pr-grid { grid-template-columns: 1fr; } .stack-row { grid-template-columns: 1fr; gap: 40px; } }
+.stack-row { grid-template-columns: 1fr; gap: 44px; }
+.model-cards { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+@media (max-width: 760px) { .model-cards { grid-template-columns: 1fr; } }
