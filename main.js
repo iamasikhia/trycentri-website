@@ -284,7 +284,7 @@ if (!reduceMotion && 'IntersectionObserver' in window) {
       const t0 = performance.now(), dur = 1600;
       const tick = now => {
         const p = Math.min((now - t0) / dur, 1), eased = 1 - Math.pow(1 - p, 3);
-        el.textContent = Math.round(end * eased) + suffix;
+        el.textContent = Math.round(end * eased).toLocaleString('en-US') + suffix;
         if (p < 1) requestAnimationFrame(tick);
       };
       requestAnimationFrame(tick);
