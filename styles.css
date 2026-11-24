@@ -226,7 +226,10 @@ em { font-style: italic; color: var(--accent); }
 .stat-label { display: block; font-size: 14px; line-height: 1.4; color: var(--ink-soft); }
 .hero-proof { display: flex; align-items: center; gap: 20px; margin-top: 28px; padding: 18px 0 0; border-top: 1px solid var(--ink); }
 .hero-proof .stat-figure { margin: 0; }
-.hero-proof .stat-label { max-width: 260px; color: var(--ink); }
+.hero-proof .stat-label { color: var(--ink); }
+.hero-proof .nb { display: block; }
+.hero-proof .nb { white-space: nowrap; }
+@media (max-width: 760px) { .hero-proof { flex-direction: column; align-items: flex-start; gap: 10px; } .hero-proof .nb { display: inline; white-space: normal; } }
 .stat-source { margin: 24px 0 0; padding-top: 14px; border-top: 1px solid var(--rule); font-size: 11px; line-height: 1.5; color: var(--muted); }
 
 /* Connected photo gallery */
