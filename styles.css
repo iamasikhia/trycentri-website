@@ -1680,3 +1680,9 @@ body::after {
 .founder-left .member-link { margin-top: 0; }
 .founder-body .road { margin-top: 32px; }
 @media (max-width: 960px) { .founder-left { align-items: flex-start; } }
+
+/* No full-width dark divider rules */
+.founder, .stack-row, .trust-stack, .faq, .brain-steps, .services, .steps, .models, .tools, .principles, .member, .team { border-top: 0 !important; }
+.founder { padding-top: 8px; }
+.stack-row { padding-top: 0; }
+.article-cta { border-top: 0; }
