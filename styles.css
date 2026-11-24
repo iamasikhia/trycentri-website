@@ -398,6 +398,11 @@ em { font-style: italic; color: var(--accent); }
   overflow: hidden;
 }
 .interview-video video { width: 100%; height: 100%; object-fit: cover; }
+.interview-quote { flex: 1; min-width: 0; margin: 0; padding: 0 0 0 56px; display: flex; flex-direction: column; justify-content: center; }
+.interview-quote p { margin: 0 0 28px; font-family: var(--serif); font-size: clamp(30px, 2.8vw, 44px); line-height: 1.18; letter-spacing: -0.01em; color: var(--ink); }
+.interview-quote footer { padding-top: 16px; border-top: 1px solid var(--rule); font-size: 14px; color: var(--muted); }
+@media (max-width: 960px) { .interview-media { flex-wrap: wrap; height: auto; } .interview-poster, .interview-video { height: 460px; } .interview-quote { flex-basis: 100%; padding: 48px 0 0; } }
+@media (max-width: 760px) { .interview-poster, .interview-video { height: auto; } .interview-quote { padding-top: 36px; } .interview-quote p { font-size: 28px; } }
 .play {
   position: absolute;
   left: 50%; top: 50%;
