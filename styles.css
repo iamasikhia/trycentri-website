@@ -1657,3 +1657,12 @@ body::after {
 .stories-track .story-body { padding: 0 14px; }
 .stories-track .story-img-poster { background: #f1ece2; }
 @media (max-width: 1100px) { .svc-link { display: none; } .svc-flow { row-gap: 64px; } }
+
+/* Models in one box (left), tool chips (right) */
+.stack-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: start; }
+.model-cards { grid-template-columns: 1fr; gap: 0; background: #fbf8f1; border: 1px solid var(--ink); position: relative; padding: 6px 0; }
+.model-cards::before { content: ""; position: absolute; inset: 5px; border: 1px solid rgba(22,21,19,.16); pointer-events: none; }
+.model-cards .model-card { background: none; border: 0; border-bottom: 1px solid var(--rule); margin: 0 18px; padding: 16px 4px; }
+.model-cards .model-card:last-child { border-bottom: 0; }
+.model-cards .model-card:hover { transform: translateX(4px); }
+@media (max-width: 760px) { .stack-row { grid-template-columns: 1fr; gap: 40px; } }
