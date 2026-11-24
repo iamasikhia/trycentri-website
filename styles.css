@@ -1401,3 +1401,23 @@ html.lenis, html.lenis body { height: auto; }
 .hero-dark .gallery-caption { color: rgba(244,241,234,.5); border-top-color: rgba(244,241,234,.14); }
 .hero-dark .gallery-caption span { color: #f4f1ea; }
 .hero-dark .media { background: #1d1b18; }
+
+/* ---------- Dark header; turns see-through (frosted) once the page scrolls ---------- */
+.site-header { background: #12110f; border-bottom-color: rgba(244,241,234,.1); transition: background .45s ease, box-shadow .45s ease, backdrop-filter .45s ease; }
+.site-header .wordmark { color: #f4f1ea; }
+.site-header .nav a { color: rgba(244,241,234,.72); }
+.site-header .nav a:hover { color: #f4f1ea; }
+.site-header .nav .nav-cta { color: #f4f1ea; border-bottom-color: #d99a85; }
+.site-header .nav-toggle span { background: #f4f1ea; }
+.site-header.is-scrolled {
+  background: rgba(18,17,15,.55);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+  box-shadow: none;
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .site-header.is-scrolled { background: rgba(18,17,15,.9); }
+}
+@media (max-width: 760px) {
+  .site-header .nav { background: #12110f; border-bottom-color: rgba(244,241,234,.1); }
+}
