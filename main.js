@@ -224,7 +224,7 @@ if (!reduceMotion && 'IntersectionObserver' in window) {
     '.interview-head > *', '.interview-media > *', '.testimonial', '.testimonial-cta',
     '.hero-copy', '.hero-side', '.gallery-caption', '.tools-note', '.sub-label',
     '.article-head > *', '.article-body > *', '.article-cover', '.article-wide', '.article-trio', '.article-pair',
-    '.article-caption', '.demo-copy > *', '.trust-row', '.photo-band blockquote'
+    '.article-caption', '.trust-row', '.photo-band blockquote'
   ];
   const items = new Set();
   groups.forEach(sel => document.querySelectorAll(sel).forEach(el => items.add(el)));
@@ -333,41 +333,3 @@ if (!reduceMotion && 'IntersectionObserver' in window) {
     tio.observe(p);
   });
 }
-
-// Agent demo: plays a short after-hours conversation on a loop while in view
-(() => {
-  const demo = document.querySelector('.demo');
-  if (!demo) return;
-  const items = [...demo.querySelectorAll('.demo-item')];
-  const steps = [...demo.querySelectorAll('.demo-steps li')];
-  if (reduceMotion || !('IntersectionObserver' in window)) {
-    steps.forEach(s => s.classList.add('on'));
-    return;
-  }
-  demo.classList.add('is-live');
-  const END = 13000;
-  let timers = [], running = false;
-  const clear = () => { timers.forEach(clearTimeout); timers = []; };
-  const at = (ms, fn) => timers.push(setTimeout(fn, ms));
-  const reset = () => {
-    items.forEach(el => el.classList.remove('on'));
-    steps.forEach(s => s.classList.remove('on'));
-  };
-  const play = () => {
-    clear(); reset();
-    items.forEach(el => {
-      at(+el.dataset.at, () => {
-        el.classList.add('on');
-        const st = el.dataset.step;
-        if (st !== undefined) steps.forEach(s => s.classList.toggle('on', +s.dataset.step <= +st));
-      });
-      if (el.dataset.until) at(+el.dataset.until, () => el.classList.remove('on'));
-    });
-    at(END, play);
-  };
-  new IntersectionObserver(entries => {
-    const vis = entries[0].isIntersecting;
-    if (vis && !running) { running = true; play(); }
-    else if (!vis && running) { running = false; clear(); }
-  }, { threshold: 0.3 }).observe(demo);
-})();
