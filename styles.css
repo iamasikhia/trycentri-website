@@ -228,7 +228,7 @@ em { font-style: italic; color: var(--accent); }
 .hero-proof .stat-figure { margin: 0; }
 .hero-proof .stat-label { color: var(--ink); }
 .hero-proof .nb { display: block; }
-.hero-proof .nb { white-space: nowrap; }
+@media (min-width: 1240px) { .hero-proof .nb { white-space: nowrap; } }
 @media (max-width: 760px) { .hero-proof { flex-direction: column; align-items: flex-start; gap: 10px; } .hero-proof .nb { display: inline; white-space: normal; } }
 .stat-source { margin: 24px 0 0; padding-top: 14px; border-top: 1px solid var(--rule); font-size: 11px; line-height: 1.5; color: var(--muted); }
 
@@ -1338,3 +1338,14 @@ html.lenis, html.lenis body { height: auto; }
 .hero-recognition img { height: 44px; width: auto; }
 .hero-recognition:hover img { opacity: .8; }
 @media (max-width: 760px) { .hero-recognition { margin-top: 32px; gap: 14px; } .hero-recognition img { height: 38px; } }
+
+/* Hero rows line up: top rules level with the lede, bottom rules level across columns */
+@media (min-width: 961px) {
+  .hero-grid { align-items: stretch; }
+  .hero-copy, .hero-side { display: flex; flex-direction: column; }
+  .hero-copy .lede { margin-top: -6px; }
+  .hero-recognition, .hero-proof { margin-top: auto; box-sizing: border-box; height: 92px; padding-top: 18px; align-items: center; }
+  .hero-recognition { display: flex; align-self: stretch; border-top-color: var(--ink); }
+  .hero-actions { margin-bottom: 40px; }
+  .stat-source { margin-bottom: 40px; }
+}
