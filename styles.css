@@ -1666,3 +1666,12 @@ body::after {
 .model-cards .model-card:last-child { border-bottom: 0; }
 .model-cards .model-card:hover { transform: translateX(4px); }
 @media (max-width: 760px) { .stack-row { grid-template-columns: 1fr; gap: 40px; } }
+
+/* Road panel sits inside the founder column */
+.founder { align-items: center; }
+.founder-body .road { margin-top: 40px; padding: 32px 32px 28px; }
+.founder-body .road-title { font-size: clamp(28px, 2.6vw, 38px); }
+.founder-body .road-sub { margin-bottom: 36px; font-size: 15px; }
+.founder-body .road-stop strong { font-size: clamp(30px, 2.6vw, 40px); }
+.founder-body .road-stop { padding-right: 16px; }
+@media (max-width: 960px) { .founder { align-items: start; } .founder-body .road { padding: 28px 22px 24px; } }
