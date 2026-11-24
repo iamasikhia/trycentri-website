@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=202611241545">
+  <link rel="stylesheet" href="styles.css?v=202611241553">
 </head>
 <body>
 
@@ -474,19 +474,37 @@
           </div>
         </header>
 
-        <div class="team">
-          <article class="member">
-            <figure class="member-photo">
-              <img src="assets/images/team/paul-asikhia.jpg" alt="Paul Asikhia, Founder and CEO of Centri AI">
-            </figure>
-            <div class="member-body">
-              <p class="member-role">Founder &amp; CEO</p>
-              <h3>Paul Asikhia</h3>
-              <p>Paul Asikhia is a digital transformation leader with over five years of experience leading technology and innovation initiatives across multiple industries. He specializes in helping organizations leverage emerging technologies to transform operations, solve complex business challenges, and build innovative digital solutions.</p>
-              <p>With a full focus on small businesses, Paul's vision is to enable 100,000 of them in Austin, Texas to adopt AI by 2040.</p>
-              <a class="member-link" href="https://www.linkedin.com/in/iseoluwa-asikhia/" target="_blank" rel="noopener"><svg class="li-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zm7.5 0h4.37v1.92h.06c.61-1.15 2.1-2.36 4.32-2.36 4.62 0 5.47 3.04 5.47 7v7.44h-4.56v-6.6c0-1.57-.03-3.6-2.2-3.6-2.2 0-2.53 1.72-2.53 3.49V22H7.72V8z"/></svg><span>Connect on LinkedIn</span></a>
+        <div class="founder">
+          <figure class="pinned-photo">
+            <span class="pin" aria-hidden="true"></span>
+            <img src="assets/images/team/paul-asikhia.jpg" alt="Paul Asikhia, Founder and CEO of Centri AI">
+            <figcaption>Paul Asikhia &middot; Austin, Texas</figcaption>
+          </figure>
+          <div class="founder-body">
+            <p class="member-role">Founder &amp; CEO</p>
+            <h3 class="founder-name">Paul Asikhia</h3>
+            <p>Paul Asikhia is a digital transformation leader with over five years of experience leading technology and innovation initiatives across multiple industries. He specializes in helping organizations leverage emerging technologies to transform operations, solve complex business challenges, and build innovative digital solutions.</p>
+            <a class="member-link" href="https://www.linkedin.com/in/iseoluwa-asikhia/" target="_blank" rel="noopener"><svg class="li-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zm7.5 0h4.37v1.92h.06c.61-1.15 2.1-2.36 4.32-2.36 4.62 0 5.47 3.04 5.47 7v7.44h-4.56v-6.6c0-1.57-.03-3.6-2.2-3.6-2.2 0-2.53 1.72-2.53 3.49V22H7.72V8z"/></svg><span>Connect on LinkedIn</span></a>
+            <div class="founder-along">
+              <p class="sub-label">Along the way</p>
+              <ul class="chips chips-link">
+                <li><a href="stories/hbs-fellowship.html">Harvard Business School Foundry</a></li>
+                <li><a href="stories/notre-dame-accelerator.html">Notre Dame Race to Revenue</a></li>
+                <li><a href="stories/student-ai-prompt-a-thon.html">Prompt-A-Thon judge</a></li>
+                <li><a href="stories/austin-small-business-expo.html">Austin Small Business Expo</a></li>
+              </ul>
             </div>
-          </article>
+          </div>
+        </div>
+
+        <div class="road" aria-label="The road to 100,000 Austin businesses">
+          <p class="road-title">The road to <em>100,000</em></p>
+          <p class="road-sub">With a full focus on small businesses, Paul's vision is to enable 100,000 of them in Austin, Texas to adopt AI by 2040.</p>
+          <ol class="road-track">
+            <li class="road-stop is-now"><span class="road-dot"></span><strong>1,000+</strong><span>trained in person since April 2026</span><em>Today</em></li>
+            <li class="road-stop"><span class="road-dot"></span><strong>10,000</strong><span>small businesses enabled</span><em>2030</em></li>
+            <li class="road-stop"><span class="road-dot"></span><strong>100,000</strong><span>Austin businesses using AI</span><em>2040</em></li>
+          </ol>
         </div>
       </div>
     </section>
@@ -501,41 +519,60 @@
             <p class="section-intro">Small businesses run on trust. We pick the model that fits the job, work inside the software you already pay for, and follow the same four principles every time.</p>
           </div>
         </header>
-        <div class="principles">
-          <article>
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <div class="pr-grid">
+          <article class="pr">
+            <div class="svc-visual pr-vis vis-perms" aria-hidden="true">
+              <p class="pv-title">What the agent can see</p>
+              <p class="perm"><span>Email</span><b class="ok">Read</b></p>
+              <p class="perm"><span>Calendar</span><b class="ok">Read &amp; book</b></p>
+              <p class="perm"><span>Bank accounts</span><b class="no">No access</b></p>
+            </div>
             <h3>Your data stays yours</h3>
             <p>We use business-grade accounts and privacy settings, and document exactly what each tool can see.</p>
           </article>
-          <article>
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+          <article class="pr">
+            <div class="svc-visual pr-vis vis-approve" aria-hidden="true">
+              <p class="pv-title">AI draft &middot; Reply to Maria</p>
+              <span class="ln"></span><span class="ln"></span><span class="ln short"></span>
+              <div class="approve-row"><span class="btn-mini">Edit</span><span class="btn-mini btn-go">Approve &amp; send</span></div>
+            </div>
             <h3>People stay in charge</h3>
             <p>AI drafts, sorts and suggests. Your team reviews and decides, especially on anything a client will see.</p>
           </article>
-          <article>
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+          <article class="pr">
+            <div class="svc-visual pr-vis vis-rules" aria-hidden="true">
+              <p class="pv-title">AI use guidelines</p>
+              <p class="rule ok">Drafting emails</p>
+              <p class="rule ok">Summarising calls</p>
+              <p class="rule no">Client card numbers</p>
+              <p class="rule no">Medical details</p>
+            </div>
             <h3>Clear rules, in writing</h3>
             <p>Every client gets plain guidelines on what should and shouldn't go into AI, written for their business.</p>
           </article>
-          <article>
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"/></svg>
+          <article class="pr">
+            <div class="svc-visual pr-vis vis-honest" aria-hidden="true">
+              <p class="pv-title">Does this need AI?</p>
+              <p class="opt">Yes, build an agent</p>
+              <p class="opt opt-pick">No. A shared inbox fixes it.</p>
+            </div>
             <h3>Honest advice</h3>
             <p>If AI isn't the right answer for a problem, we'll say so and point you to what is.</p>
           </article>
         </div>
 
-        <div class="trust-stack">
-          <div class="trust-row">
-            <h3 class="sub-label">Models we work with</h3>
-            <ul class="trust-list trust-models">
-              <li><strong>OpenAI</strong> ChatGPT &amp; GPT models</li>
-              <li><strong>Anthropic</strong> Claude</li>
-              <li><strong>Google</strong> Gemini</li>
+        <div class="stack-row">
+          <div>
+            <p class="sub-label">Models we work with</p>
+            <ul class="model-cards">
+              <li class="model-card"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"/></svg><span><small>OpenAI</small><strong>ChatGPT &amp; GPT models</strong></span></li>
+              <li class="model-card"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z"/></svg><span><small>Anthropic</small><strong>Claude</strong></span></li>
+              <li class="model-card"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"/></svg><span><small>Google</small><strong>Gemini</strong></span></li>
             </ul>
           </div>
-          <div class="trust-row">
-            <h3 class="sub-label">Tools we work inside</h3>
-            <ul class="trust-list trust-tools">
+          <div>
+            <p class="sub-label">Tools we work inside</p>
+            <ul class="chips">
               <li>Google Workspace</li><li>Microsoft 365</li><li>QuickBooks</li><li>Xero</li><li>HubSpot</li><li>Calendly</li><li>Square</li><li>Stripe</li><li>Slack</li><li>WhatsApp Business</li><li>Notion</li><li>Zapier</li>
             </ul>
           </div>
@@ -676,6 +713,6 @@
     </div>
   </footer>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="main.js?v=202611241545"></script>
+  <script src="main.js?v=202611241553"></script>
 </body>
 </html>

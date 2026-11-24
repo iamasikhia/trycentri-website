@@ -220,7 +220,7 @@ if (!reduceMotion && 'IntersectionObserver' in window) {
   // Elements that fade up as they enter; siblings are staggered
   const groups = [
     '.section-head', '.band', '.brain-steps li', '.brain-feed', '.service', '.model', '.tool', '.principles article',
-    '.step', '.story-card', '.member', '.faq details', '.statement blockquote',
+    '.step', '.story-card', '.member', '.pr', '.svc', '.founder > *', '.road', '.stack-row > *', '.faq details', '.statement blockquote',
     '.interview-head > *', '.interview-media > *', '.testimonial', '.testimonial-cta',
     '.hero-copy', '.hero-side', '.gallery-caption', '.tools-note', '.sub-label',
     '.article-head > *', '.article-body > *', '.article-cover', '.article-wide', '.article-trio', '.article-pair',
