@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=202611241540">
+  <link rel="stylesheet" href="styles.css?v=202611241542">
 </head>
 <body>
 
@@ -119,42 +119,66 @@
           </div>
         </header>
 
-        <div class="services">
-          <article class="service">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 10h8"/><path d="M8 14h5"/></svg>
+        <div class="svc-flow">
+          <article class="svc">
+            <div class="svc-visual vis-chat" aria-hidden="true">
+              <p class="bub bub-in">Where does most of your week go?</p>
+              <p class="bub bub-out">Chasing invoices. Every Friday.</p>
+              <p class="bub bub-in">Let's start there.</p>
+            </div>
+            <span class="svc-num">01</span>
             <h3>One-to-one coaching</h3>
             <p>Personal guidance for the owner on a project you choose, at your place of business, on your real work.</p>
-            <ul class="ticks">
-              <li>A free first conversation about your week</li>
-              <li>One clear project, chosen together</li>
-              <li>Working sessions on your own tasks</li>
-              <li>Plain-English answers, no jargon</li>
-              <li>A real person to call</li>
+            <ul class="chips">
+              <li>A free first conversation</li><li>One clear project</li><li>Working sessions on real tasks</li><li>Plain English, no jargon</li><li>A real person to call</li>
             </ul>
           </article>
-          <article class="service">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          <div class="svc-link" aria-hidden="true"><svg viewBox="0 0 60 12" preserveAspectRatio="none"><line x1="0" y1="6" x2="60" y2="6"/><circle r="3.2" cy="6"><animate attributeName="cx" from="0" to="60" dur="2.4s" repeatCount="indefinite"/></circle></svg></div>
+          <article class="svc">
+            <div class="svc-visual vis-hub" aria-hidden="true">
+              <svg viewBox="0 0 320 190">
+                <g class="hub-lines">
+                  <path id="hl1" d="M160 95 L52 34"/><path id="hl2" d="M160 95 L268 34"/><path id="hl3" d="M160 95 L40 120"/><path id="hl4" d="M160 95 L280 120"/><path id="hl5" d="M160 95 L160 170"/>
+                </g>
+                <g class="hub-pulses">
+                  <circle r="3"><animateMotion dur="2.6s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#hl1"/></animateMotion></circle>
+                  <circle r="3"><animateMotion dur="3.1s" begin=".6s" repeatCount="indefinite"><mpath href="#hl2"/></animateMotion></circle>
+                  <circle r="3"><animateMotion dur="2.8s" begin="1.1s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#hl3"/></animateMotion></circle>
+                  <circle r="3"><animateMotion dur="3.3s" begin=".3s" repeatCount="indefinite"><mpath href="#hl4"/></animateMotion></circle>
+                  <circle r="3"><animateMotion dur="2.4s" begin="1.6s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#hl5"/></animateMotion></circle>
+                </g>
+                <g class="hub-tags">
+                  <g transform="translate(52 34)"><rect x="-34" y="-13" width="68" height="26" rx="13"/><text>Gmail</text></g>
+                  <g transform="translate(268 34)"><rect x="-40" y="-13" width="80" height="26" rx="13"/><text>Calendar</text></g>
+                  <g transform="translate(40 120)"><rect x="-32" y="-13" width="64" height="26" rx="13"/><text>CRM</text></g>
+                  <g transform="translate(280 120)"><rect x="-34" y="-13" width="68" height="26" rx="13"/><text>Slack</text></g>
+                  <g transform="translate(160 170)"><rect x="-48" y="-13" width="96" height="26" rx="13"/><text>QuickBooks</text></g>
+                </g>
+                <circle class="hub-ring" cx="160" cy="95" r="30"/>
+                <circle class="hub-core" cx="160" cy="95" r="22"/>
+                <g transform="translate(160 95) scale(.12)" class="hub-mark"><polygon points="-3,-105.2 -89.6,-55.2 -3,-5.2"/><polygon points="3,-105.2 89.6,-55.2 3,-5.2"/><polygon points="-92.6,-50 -92.6,50 -6,0"/><polygon points="-89.6,55.2 -3,105.2 -3,5.2"/><polygon points="3,105.2 89.6,55.2 3,5.2"/></g>
+              </svg>
+            </div>
+            <span class="svc-num">02</span>
             <h3>Integration</h3>
             <p>We connect AI to the systems you rely on every day, so the work happens where your team already is.</p>
-            <ul class="ticks">
-              <li>Finding and following up new leads</li>
-              <li>Call answering, booking &amp; reminders</li>
-              <li>Inbox triage and drafted replies</li>
-              <li>Quotes, invoices &amp; follow-ups</li>
-              <li>Intake forms and client onboarding</li>
-              <li>Reports pulled from your own data</li>
+            <ul class="chips">
+              <li>Finding &amp; following up leads</li><li>Call answering &amp; booking</li><li>Inbox triage &amp; replies</li><li>Quotes &amp; invoices</li><li>Client onboarding</li><li>Reports from your data</li>
             </ul>
           </article>
-          <article class="service">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+          <div class="svc-link" aria-hidden="true"><svg viewBox="0 0 60 12" preserveAspectRatio="none"><line x1="0" y1="6" x2="60" y2="6"/><circle r="3.2" cy="6"><animate attributeName="cx" from="0" to="60" dur="2.4s" repeatCount="indefinite"/></circle></svg></div>
+          <article class="svc">
+            <div class="svc-visual vis-meter" aria-hidden="true">
+              <p class="meter-label">Team confidence with AI</p>
+              <div class="meter"><span class="meter-tag">Before</span><span class="meter-bar"><i style="--w:22%"></i></span><span class="meter-val">22%</span></div>
+              <div class="meter meter-after"><span class="meter-tag">After</span><span class="meter-bar"><i style="--w:91%"></i></span><span class="meter-val">91%</span></div>
+              <div class="meter-people"><span>FD</span><span>OM</span><span>ST</span><span>+4</span></div>
+            </div>
+            <span class="svc-num">03</span>
             <h3>Enablement</h3>
             <p>We train your people (owners, front desk and staff) until using AI feels as ordinary as sending an email.</p>
-            <ul class="ticks">
-              <li>Hands-on workshops for your team</li>
-              <li>Playbooks written for your business</li>
-              <li>Safe-use &amp; data privacy guidelines</li>
-              <li>Monthly check-ins and tune-ups</li>
-              <li>Onboarding for new hires</li>
+            <ul class="chips">
+              <li>Hands-on workshops</li><li>Playbooks for your business</li><li>Safe-use &amp; privacy rules</li><li>Monthly tune-ups</li><li>New-hire onboarding</li>
             </ul>
           </article>
         </div>
@@ -643,6 +667,6 @@
     </div>
   </footer>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="main.js?v=202611241540"></script>
+  <script src="main.js?v=202611241542"></script>
 </body>
 </html>
