@@ -1405,3 +1405,85 @@ body::after {
 .pc-org { margin-top: 10px; padding-top: 12px; border-top: 1px solid var(--accent); font-size: 12px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--accent); justify-self: center; }
 @media (max-width: 760px) { .poster-card { padding: 48px 24px; } }
 .gallery img { filter: brightness(1.14) contrast(1.03) saturate(1.05); }
+
+/* ---------- Services as ledger rows ---------- */
+.services { display: block; counter-reset: svc; border-top: 1px solid var(--ink); }
+.services .service {
+  counter-increment: svc;
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr) minmax(0, 1.15fr);
+  grid-template-areas: "num title list" "num desc list";
+  grid-template-rows: auto 1fr;
+  column-gap: 56px;
+  padding: 44px 0;
+  border-left: 0;
+  border-top: 0;
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+  transition: background .4s ease;
+}
+.services .service:last-child { border-bottom: 1px solid var(--ink); }
+.services .service::before {
+  content: counter(svc, decimal-leading-zero);
+  grid-area: num;
+  font-family: var(--serif);
+  font-size: 64px;
+  line-height: .9;
+  color: var(--accent);
+}
+.services .service .icon { grid-area: num; align-self: end; margin: 0; width: 30px; height: 30px; }
+.services .service h3 { grid-area: title; font-size: clamp(30px, 2.8vw, 40px); margin: 0 0 14px; }
+.services .service > p { grid-area: desc; margin: 0; max-width: 440px; }
+.services .service .ticks { grid-area: list; display: grid; grid-template-columns: 1fr 1fr; column-gap: 32px; align-content: start; border-top: 1px solid var(--ink); }
+.services .service .ticks li { display: flex; gap: 10px; align-items: baseline; }
+.services .service .ticks li::before { content: ""; flex: none; width: 5px; height: 5px; background: var(--accent); transform: translateY(-2px) rotate(45deg); }
+@media (max-width: 1100px) {
+  .services .service { grid-template-columns: 90px minmax(0, 1fr); grid-template-areas: "num title" "num desc" "num list"; column-gap: 32px; }
+  .services .service::before { font-size: 48px; }
+  .services .service .ticks { margin-top: 24px; }
+  .services .service .icon { align-self: start; margin-top: 64px; }
+}
+@media (max-width: 760px) {
+  .services .service { grid-template-columns: 1fr; grid-template-areas: "num" "title" "desc" "list"; padding: 36px 0; }
+  .services .service::before { font-size: 40px; margin-bottom: 12px; }
+  .services .service .icon { display: none; }
+  .services .service .ticks { grid-template-columns: 1fr; }
+}
+
+/* ---------- Approach as a timeline ---------- */
+.steps { position: relative; border-top: 0; padding-top: 0; }
+.steps::before { content: ""; position: absolute; left: 0; right: 0; top: 46px; height: 1px; background: var(--ink); }
+.steps .step, .steps .step + .step { position: relative; padding: 0 32px 0 0; border-left: 0; border-top: 0; margin-top: 0; }
+.steps .step-time { order: -2; display: block; height: 30px; margin: 0 0 32px; color: var(--accent); }
+.steps .step::before { content: ""; position: absolute; left: 0; top: 40px; width: 13px; height: 13px; border-radius: 50%; background: var(--paper); border: 1px solid var(--accent); box-shadow: inset 0 0 0 3px var(--paper), inset 0 0 0 7px var(--accent); }
+.steps .step-num { order: -1; margin: 0 0 18px; font-size: 44px; line-height: 1; color: var(--ink); opacity: .9; }
+.steps .step .icon { margin: 0 0 16px; }
+.steps .step h3 { margin-bottom: 10px; }
+@media (max-width: 960px) {
+  .steps { grid-template-columns: 1fr 1fr; row-gap: 56px; }
+  .steps .step:nth-child(n+3) { padding-left: 0; }
+}
+@media (max-width: 760px) {
+  .steps { grid-template-columns: 1fr; row-gap: 0; padding-left: 28px; }
+  .steps::before { left: 6px; right: auto; top: 6px; bottom: 6px; width: 1px; height: auto; }
+  .steps .step, .steps .step + .step { padding: 0 0 40px 0; }
+  .steps .step::before { left: -28px; top: 0; }
+  .steps .step-time { height: auto; margin-bottom: 14px; }
+  .steps .step-num { font-size: 34px; }
+}
+
+/* ---------- Red pins on the hero gallery corners ---------- */
+.gallery { position: relative; }
+.gallery::before, .gallery::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #e46a55 0%, #b8321f 45%, #7a1d10 100%);
+  box-shadow: 0 3px 4px rgba(22,21,19,.35), 2px 6px 10px rgba(22,21,19,.2), inset -2px -2px 3px rgba(0,0,0,.25);
+  pointer-events: none;
+}
+.gallery::before { top: -9px; left: -9px; }
+.gallery::after { bottom: -9px; right: -9px; }
+@media (max-width: 760px) { .gallery::before, .gallery::after { width: 18px; height: 18px; } .gallery::before { top: -7px; left: -7px; } .gallery::after { bottom: -7px; right: -7px; } }
