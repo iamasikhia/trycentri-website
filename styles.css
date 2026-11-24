@@ -1340,5 +1340,5 @@ html.lenis, html.lenis body { height: auto; }
 @media (max-width: 760px) { .hero-recognition { margin-top: 32px; gap: 14px; } .hero-recognition img { height: 38px; } }
 
 /* Hero: Harvard recognition sits under the 1,000+ stat */
-.hero-side .hero-recognition { display: flex; margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--rule); }
+.hero-copy .hero-recognition { margin-top: 36px; padding-top: 0; border-top: 0; }
 @media (min-width: 961px) { .hero-copy .lede { margin-top: -6px; } }
