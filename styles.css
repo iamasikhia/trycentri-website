@@ -1551,3 +1551,10 @@ body::after {
   .svc-link { height: 56px; justify-content: center; }
   .svc-link svg { width: 12px; height: 100%; transform: rotate(90deg); width: 56px; }
 }
+
+/* Testimonial headshots */
+.testimonial figcaption.has-photo { display: flex; align-items: center; gap: 16px; }
+.t-photo { flex: none; width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255,255,255,.18); filter: sepia(.08); }
+.t-who { display: grid; gap: 4px; }
+.testimonial .t-who > span { color: rgba(255,255,255,.6); }
+.testimonial figcaption > .t-who { color: var(--paper); }
