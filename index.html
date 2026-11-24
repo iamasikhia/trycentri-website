@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=202611241447">
+  <link rel="stylesheet" href="styles.css?v=202611241454">
 </head>
 <body>
 
@@ -37,6 +37,28 @@
 
     <!-- HERO -->
     <section class="hero">
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 600 600">
+          <defs>
+            <pattern id="hero-dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.2"/></pattern>
+            <radialGradient id="hero-fade" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+            <mask id="hero-mask"><rect width="600" height="600" fill="url(#hero-fade)"/></mask>
+          </defs>
+          <rect class="ha-dots" width="600" height="600" fill="url(#hero-dots)" mask="url(#hero-mask)"/>
+          <g class="ha-rings">
+            <circle cx="300" cy="300" r="90"/>
+            <circle cx="300" cy="300" r="150"/>
+            <circle cx="300" cy="300" r="210" class="ha-dash"/>
+            <circle cx="300" cy="300" r="270"/>
+          </g>
+          <path class="ha-arc" d="M300 30 A270 270 0 0 1 570 300"/>
+          <path class="ha-arc ha-arc-2" d="M150 300 A150 150 0 0 1 300 150"/>
+          <g class="ha-orbit ha-o1"><circle cx="300" cy="90" r="5"/></g>
+          <g class="ha-orbit ha-o2"><circle cx="300" cy="150" r="3.5"/></g>
+          <g class="ha-orbit ha-o3"><circle cx="300" cy="30" r="4"/></g>
+          <g class="ha-mark" transform="translate(300 300) scale(.22)"><polygon points="-3,-105.2 -89.6,-55.2 -3,-5.2"/><polygon points="3,-105.2 89.6,-55.2 3,-5.2"/><polygon points="-92.6,-50 -92.6,50 -6,0"/><polygon points="-89.6,55.2 -3,105.2 -3,5.2"/><polygon points="3,105.2 89.6,55.2 3,5.2"/></g>
+        </svg>
+      </div>
       <div class="wrap">
         <div class="hero-head">
           <p class="eyebrow">AI integration &amp; enablement &middot; Austin, Texas</p>
@@ -638,6 +660,6 @@
     </div>
   </footer>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="main.js?v=202611241447"></script>
+  <script src="main.js?v=202611241454"></script>
 </body>
 </html>
