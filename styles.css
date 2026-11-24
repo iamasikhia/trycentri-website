@@ -1675,3 +1675,8 @@ body::after {
 .founder-body .road-stop strong { font-size: clamp(30px, 2.6vw, 40px); }
 .founder-body .road-stop { padding-right: 16px; }
 @media (max-width: 960px) { .founder { align-items: start; } .founder-body .road { padding: 28px 22px 24px; } }
+.founder { align-items: start; }
+.founder-left { display: flex; flex-direction: column; align-items: center; gap: 28px; }
+.founder-left .member-link { margin-top: 0; }
+.founder-body .road { margin-top: 32px; }
+@media (max-width: 960px) { .founder-left { align-items: flex-start; } }
