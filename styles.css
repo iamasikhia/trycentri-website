@@ -1408,3 +1408,19 @@ html.lenis, html.lenis body { height: auto; }
 .hero-photo-caption { margin: 0; font-family: var(--serif); font-style: italic; font-size: 17px; color: var(--muted); }
 .hero-photo-caption span { color: var(--ink); }
 @media (min-width: 961px) { .hero-facts .hero-copy { display: flex; flex-direction: column; } }
+
+/* ---------- Split hero: text left, four-photo mosaic right ---------- */
+.hero-split { min-height: 0; display: block; }
+.hero-split::before, .hero-split::after { display: none; }
+.hero-split .hero-photo-inner { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 64px; align-items: center; padding-top: 80px; padding-bottom: 80px; }
+.hero-split .hero-photo-copy { width: auto; }
+.hero-split h1 { font-size: clamp(40px, 3.6vw, 60px); }
+.hero-gallery { height: min(72vh, 640px); margin: 0; gap: 6px; }
+@media (max-width: 1100px) {
+  .hero-split .hero-photo-inner { grid-template-columns: 1fr; gap: 48px; padding-top: 56px; padding-bottom: 56px; }
+  .hero-gallery { height: auto; }
+}
+@media (min-width: 961px) { .hero-gallery { grid-template-rows: 1fr 1fr; } }
+@media (max-width: 1100px) and (min-width: 961px) { .hero-gallery { height: 560px; } }
+.hero-gallery .media { background: #2a2825; border: 0; }
+@media (min-width: 961px) { .hero-gallery .g-a img { object-position: 14% center; } }
