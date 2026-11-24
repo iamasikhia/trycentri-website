@@ -1656,3 +1656,4 @@ body::after {
 .stories-track .story-img { margin-bottom: 22px; }
 .stories-track .story-body { padding: 0 14px; }
 .stories-track .story-img-poster { background: #f1ece2; }
+@media (max-width: 1100px) { .svc-link { display: none; } .svc-flow { row-gap: 64px; } }
