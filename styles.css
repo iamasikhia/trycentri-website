@@ -1404,3 +1404,4 @@ body::after {
 .pc-role { font-size: 15px; color: var(--ink-soft); }
 .pc-org { margin-top: 10px; padding-top: 12px; border-top: 1px solid var(--accent); font-size: 12px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--accent); justify-self: center; }
 @media (max-width: 760px) { .poster-card { padding: 48px 24px; } }
+.gallery img { filter: brightness(1.14) contrast(1.03) saturate(1.05); }
