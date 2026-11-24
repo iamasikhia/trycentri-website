@@ -1686,3 +1686,12 @@ body::after {
 .founder { padding-top: 8px; }
 .stack-row { padding-top: 0; }
 .article-cta { border-top: 0; }
+/* Models box: three models side by side in one row */
+.model-cards { grid-template-columns: repeat(3, 1fr); padding: 0 6px; }
+.model-cards .model-card { margin: 14px 0; padding: 6px 18px; border-bottom: 0; border-left: 1px solid var(--rule); }
+.model-cards .model-card:first-child { border-left: 0; }
+@media (max-width: 760px) {
+  .model-cards { grid-template-columns: 1fr; padding: 6px 0; }
+  .model-cards .model-card { margin: 0 18px; padding: 16px 4px; border-left: 0; border-bottom: 1px solid var(--rule); }
+  .model-cards .model-card:last-child { border-bottom: 0; }
+}
