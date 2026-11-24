@@ -333,3 +333,79 @@ if (!reduceMotion && 'IntersectionObserver' in window) {
     tio.observe(p);
   });
 }
+
+// Hero node network: drifting nodes joined by fine strings; strings reach toward the cursor
+(() => {
+  const canvas = document.querySelector('.hero-net');
+  if (!canvas) return;
+  const hero = canvas.parentElement;
+  const ctx = canvas.getContext('2d');
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  let w = 0, h = 0, nodes = [], raf = 0, visible = true;
+  const mouse = { x: -9999, y: -9999 };
+  const LINK = 150;
+
+  const build = () => {
+    w = hero.clientWidth; h = hero.clientHeight;
+    canvas.width = w * dpr; canvas.height = h * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const count = Math.round(Math.min(110, Math.max(36, (w * h) / 16000)));
+    nodes = Array.from({ length: count }, (_, i) => ({
+      x: Math.random() * w, y: Math.random() * h,
+      vx: (Math.random() - 0.5) * 0.22, vy: (Math.random() - 0.5) * 0.22,
+      r: Math.random() * 1.4 + 0.8,
+      hot: i % 9 === 0
+    }));
+  };
+
+  const draw = () => {
+    ctx.clearRect(0, 0, w, h);
+    for (const n of nodes) {
+      n.x += n.vx; n.y += n.vy;
+      if (n.x < -20) n.x = w + 20; else if (n.x > w + 20) n.x = -20;
+      if (n.y < -20) n.y = h + 20; else if (n.y > h + 20) n.y = -20;
+    }
+    for (let i = 0; i < nodes.length; i++) {
+      const a = nodes[i];
+      for (let j = i + 1; j < nodes.length; j++) {
+        const b = nodes[j];
+        const dx = a.x - b.x, dy = a.y - b.y, d = Math.hypot(dx, dy);
+        if (d < LINK) {
+          const t = 1 - d / LINK;
+          ctx.strokeStyle = (a.hot || b.hot) ? `rgba(217,154,133,${t * 0.35})` : `rgba(244,241,234,${t * 0.12})`;
+          ctx.lineWidth = 1;
+          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+        }
+      }
+      const md = Math.hypot(a.x - mouse.x, a.y - mouse.y);
+      if (md < 200) {
+        ctx.strokeStyle = `rgba(217,154,133,${(1 - md / 200) * 0.5})`;
+        ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
+      }
+    }
+    for (const n of nodes) {
+      ctx.fillStyle = n.hot ? 'rgba(217,154,133,.9)' : 'rgba(244,241,234,.45)';
+      ctx.beginPath(); ctx.arc(n.x, n.y, n.hot ? n.r + 1 : n.r, 0, Math.PI * 2); ctx.fill();
+    }
+  };
+
+  const loop = () => { draw(); raf = visible ? requestAnimationFrame(loop) : 0; };
+
+  build();
+  if (reduceMotion) { draw(); return; }
+  loop();
+
+  let rt;
+  window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(build, 150); });
+  hero.addEventListener('pointermove', e => {
+    const r = hero.getBoundingClientRect();
+    mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top;
+  });
+  hero.addEventListener('pointerleave', () => { mouse.x = mouse.y = -9999; });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(([en]) => {
+      visible = en.isIntersecting;
+      if (visible && !raf) loop();
+    }).observe(hero);
+  }
+})();

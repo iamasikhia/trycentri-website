@@ -1375,3 +1375,29 @@ html.lenis, html.lenis body { height: auto; }
   .interview-media { height: 520px; }
   .interview-quote { padding-left: 40px; }
 }
+
+/* ---------- Dark hero with node network ---------- */
+.hero-dark { position: relative; overflow: hidden; background: #12110f; color: #f4f1ea; }
+.hero-dark > .wrap { position: relative; z-index: 1; }
+.hero-net { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+.hero-dark::after { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(ellipse at 20% 30%, rgba(18,17,15,.65), transparent 60%); }
+.hero-dark .eyebrow { color: rgba(244,241,234,.6); }
+.hero-dark h1 { color: #f4f1ea; }
+.hero-dark h1 em { color: #d99a85; }
+.hero-dark .lede { color: rgba(244,241,234,.78); }
+.hero-dark .btn-solid { background: #f4f1ea; color: #12110f; border-color: #f4f1ea; }
+.hero-dark .btn-solid:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.hero-dark .btn-line { color: #f4f1ea; border-color: rgba(244,241,234,.55); }
+.hero-dark .btn-line:hover { background: #f4f1ea; color: #12110f; }
+.hero-dark .hero-stats::before { background: rgba(244,241,234,.7); }
+.hero-dark .stat + .stat { border-left-color: rgba(244,241,234,.14); }
+.hero-dark .stat-figure { color: #d99a85; }
+.hero-dark .stat-label { color: rgba(244,241,234,.78); }
+.hero-dark .stat-source { color: rgba(244,241,234,.45); border-top-color: rgba(244,241,234,.14); }
+.hero-dark .hero-proof { border-top-color: rgba(244,241,234,.7); }
+.hero-dark .hero-proof .stat-label { color: #f4f1ea; }
+.hero-dark .hero-recognition { color: rgba(244,241,234,.55); }
+.hero-dark .hero-recognition img { background: #fff; padding: 6px 10px; height: 36px; box-sizing: content-box; }
+.hero-dark .gallery-caption { color: rgba(244,241,234,.5); border-top-color: rgba(244,241,234,.14); }
+.hero-dark .gallery-caption span { color: #f4f1ea; }
+.hero-dark .media { background: #1d1b18; }
