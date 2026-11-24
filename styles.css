@@ -11,7 +11,7 @@
   --serif: "EB Garamond", Garamond, "Times New Roman", serif;
   --sans: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
   --wrap: 1400px;
-  --gutter: 24px;
+  --gutter: clamp(24px, 6vw, 96px);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
