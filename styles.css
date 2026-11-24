@@ -1558,3 +1558,4 @@ body::after {
 .t-who { display: grid; gap: 4px; }
 .testimonial .t-who > span { color: rgba(255,255,255,.6); }
 .testimonial figcaption > .t-who { color: var(--paper); }
+.t-links { display: flex; gap: 16px; }
