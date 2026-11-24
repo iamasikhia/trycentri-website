@@ -1324,3 +1324,11 @@ html.lenis, html.lenis body { height: auto; }
 @media (prefers-reduced-motion: reduce) {
   .brain-pulse { display: none; }
 }
+
+/* Typing effect */
+.is-typing-ready .tch { visibility: hidden; }
+.is-typing-ready .tch.on { visibility: visible; }
+.type-caret { display: inline-block; width: 0; position: relative; }
+.type-caret::after { content: ""; position: absolute; left: 2px; top: -0.82em; width: 2px; height: 0.95em; background: var(--accent); animation: caret-blink 1s steps(1) infinite; }
+.type-caret.done { display: none; }
+@keyframes caret-blink { 50% { opacity: 0; } }

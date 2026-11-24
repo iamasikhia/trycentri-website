@@ -295,4 +295,41 @@ if (!reduceMotion && 'IntersectionObserver' in window) {
 
   // Hero headline rises in line by line on load
   requestAnimationFrame(() => root.classList.add('loaded'));
+
+  // Fast typing effect for quotes marked data-type. Characters are hidden, not
+  // removed, so the layout never jumps while the text types in.
+  document.querySelectorAll('[data-type] p').forEach(p => {
+    const chars = [];
+    const walk = node => {
+      [...node.childNodes].forEach(n => {
+        if (n.nodeType === 3) {
+          const frag = document.createDocumentFragment();
+          for (const ch of n.textContent) {
+            const s = document.createElement('span');
+            s.className = 'tch'; s.textContent = ch;
+            frag.appendChild(s); chars.push(s);
+          }
+          n.replaceWith(frag);
+        } else if (n.nodeType === 1) walk(n);
+      });
+    };
+    walk(p);
+    const caret = document.createElement('span');
+    caret.className = 'type-caret'; caret.setAttribute('aria-hidden', 'true');
+    p.closest('[data-type]').classList.add('is-typing-ready');
+    const tio = new IntersectionObserver(entries => {
+      if (!entries[0].isIntersecting) return;
+      tio.disconnect();
+      let i = 0;
+      const step = () => {
+        const n = Math.min(i + 2, chars.length);
+        for (; i < n; i++) chars[i].classList.add('on');
+        chars[i - 1].after(caret);
+        if (i < chars.length) setTimeout(step, 28);
+        else setTimeout(() => caret.classList.add('done'), 1800);
+      };
+      step();
+    }, { threshold: 0.5 });
+    tio.observe(p);
+  });
 }
