@@ -1729,3 +1729,8 @@ body::after {
 @media (min-width: 900px) { .photo-band .pb-lines span { white-space: nowrap; } .photo-band .pb-lines { font-size: clamp(28px, 3vw, 46px); } }
 @media (max-width: 899px) { .photo-band .pb-lines span { display: inline; } }
 .photo-band .pb-label { color: rgba(255,255,255,.75); }
+
+/* Mobile: service visual sits under the text */
+@media (max-width: 760px) {
+  .svc-visual { order: 10; margin: 24px 0 0; }
+}
