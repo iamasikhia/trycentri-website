@@ -328,6 +328,7 @@ em { font-style: italic; color: var(--accent); }
   .marquee-track { width: auto; }
   .marquee-list { flex-wrap: wrap; row-gap: 10px; }
   .marquee-list[aria-hidden] { display: none; }
+  .marquee-list li:nth-child(n+5) { display: none; }
 }
 
 /* ---------- Services ---------- */
