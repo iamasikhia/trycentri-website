@@ -1720,3 +1720,4 @@ body::after {
   .closing { padding: 56px 0; }
   .section-head { margin-bottom: 32px; }
 }
+.founder-body > p:not(.member-role) { max-width: none; }
