@@ -1721,3 +1721,5 @@ body::after {
   .section-head { margin-bottom: 32px; }
 }
 .founder-body > p:not(.member-role) { max-width: none; }
+.photo-band .pb-label { margin: 0 0 18px; font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: #e0b2a2; }
+.photo-band blockquote em { color: #e0b2a2; }
