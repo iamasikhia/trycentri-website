@@ -1695,3 +1695,11 @@ body::after {
   .model-cards .model-card { margin: 0 18px; padding: 16px 4px; border-left: 0; border-bottom: 1px solid var(--rule); }
   .model-cards .model-card:last-child { border-bottom: 0; }
 }
+
+/* Mobile: section number sits on the same line as the title */
+@media (max-width: 960px) {
+  .section-head { grid-template-columns: auto 1fr; column-gap: 14px; row-gap: 0; align-items: baseline; }
+  .section-head .section-num { margin: 0; font-size: 18px; }
+  .section-head-stack { display: grid; }
+  .section-head-stack .section-num { margin-bottom: 0; }
+}
