@@ -1738,3 +1738,13 @@ body::after {
 /* Upright accent word */
 em.upright { font-style: normal; }
 .intro-lead { font-style: normal; }
+
+/* Hero gallery: every photo shows in full (cells match each photo's shape) */
+.gallery { grid-template-columns: 1.84fr 1fr 1fr; grid-template-rows: auto auto; }
+.gallery .g-b, .gallery .g-c, .gallery .g-d { height: auto; aspect-ratio: 3 / 2; }
+.gallery .g-a { height: 100%; }
+.gallery .media img { object-position: center; }
+@media (max-width: 960px) {
+  .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto auto; }
+  .gallery .g-a { height: auto; aspect-ratio: 1656 / 1800; }
+}
