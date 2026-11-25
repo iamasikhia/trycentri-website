@@ -1737,3 +1737,4 @@ body::after {
 
 /* Upright accent word */
 em.upright { font-style: normal; }
+.intro-lead { font-style: normal; }
