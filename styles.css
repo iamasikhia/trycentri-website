@@ -1723,3 +1723,8 @@ body::after {
 .founder-body > p:not(.member-role) { max-width: none; }
 .photo-band .pb-label { margin: 0 0 18px; font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: #e0b2a2; }
 .photo-band blockquote em { color: #e0b2a2; }
+.photo-band blockquote { max-width: none; }
+.photo-band .pb-lines span { display: block; }
+@media (min-width: 900px) { .photo-band .pb-lines span { white-space: nowrap; } .photo-band .pb-lines { font-size: clamp(28px, 3vw, 46px); } }
+@media (max-width: 899px) { .photo-band .pb-lines span { display: inline; } }
+.photo-band .pb-label { color: rgba(255,255,255,.75); }
