@@ -1703,3 +1703,20 @@ body::after {
   .section-head-stack { display: grid; }
   .section-head-stack .section-num { margin-bottom: 0; }
 }
+
+/* Tighter vertical rhythm between sections */
+.section { padding: 80px 0; }
+.hero { padding: 64px 0 56px; }
+.band { padding: 28px 0; }
+.interview { padding: 80px 0; }
+.testimonials { padding: 80px 0 64px; }
+.closing { padding: 72px 0; }
+.photo-band { min-height: 440px; }
+.section-head { margin-bottom: 44px; }
+@media (max-width: 760px) {
+  .section, .interview { padding: 56px 0; }
+  .hero { padding: 40px 0 40px; }
+  .testimonials { padding: 56px 0 48px; }
+  .closing { padding: 56px 0; }
+  .section-head { margin-bottom: 32px; }
+}
