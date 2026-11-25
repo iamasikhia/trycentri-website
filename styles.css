@@ -1748,3 +1748,6 @@ em.upright { font-style: normal; }
   .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto auto; }
   .gallery .g-a { height: auto; aspect-ratio: 1656 / 1800; }
 }
+
+/* Smaller hero lede */
+.hero-copy .lede { font-size: 16px; line-height: 1.6; }
