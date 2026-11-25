@@ -1734,3 +1734,6 @@ body::after {
 @media (max-width: 760px) {
   .svc-visual { order: 10; margin: 24px 0 0; }
 }
+
+/* Upright accent word */
+em.upright { font-style: normal; }
